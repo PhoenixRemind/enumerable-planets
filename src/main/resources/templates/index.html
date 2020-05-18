@@ -9,6 +9,19 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
-
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Planets</th>
+        <th>Year Length in Earth Days</th>
+        <th>Average Orbit Distance</th>
+    </tr>
+    </thead>
+    <tr th:each="planet : ${planets}">
+    <td th:text="${planet.name}"></td>
+    <td th:text="${planet.yearLength}"></td>
+    <td th:text="${planet.orbitDistance}"></td>
+    </tr>
+</table>
 </body>
 </html>
